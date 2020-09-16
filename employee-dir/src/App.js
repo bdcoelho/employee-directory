@@ -24,6 +24,7 @@ class App extends React.Component {
   };
 
   handleInputChange = (event) => {
+    console.log(event.target.value);
     this.setState({
       pending: event.target.value,
     });
@@ -31,6 +32,7 @@ class App extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state.pending);
     this.setState({ search: this.state.pending });
   };
 
@@ -44,7 +46,6 @@ class App extends React.Component {
 
   sorter = () => {
     if (this.state.employees.length > 0) {
-      console.log(this.state.sortBy);
       return this.state.employees.map((employee) => (
         <Employee
           key={employee.id.value}
@@ -62,7 +63,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="employees">
-        <Navbar handleSort={this.handleSort} />
+        <Navbar
+          value={this.state.pending}
+          handleSort={this.handleSort}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+        />
 
         <Table striped bordered hover>
           <thead>
