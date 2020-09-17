@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   searchEmployees = () => {
-    axios.get("https://randomuser.me/api/?results=50&nat=au").then((res) => {
+    axios.get("https://randomuser.me/api/?results=10&nat=au").then((res) => {
       this.setState({ employees: res.data.results });
     });
   };

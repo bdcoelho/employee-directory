@@ -30,7 +30,7 @@
 
   ## Demonstration
 
-  Access the live application here: https://fast-anchorage-29235.herokuapp.com/.
+  Access the live application here: https://bdcoelho.github.io/employee-directory/.
 
   #### Screenshot
 
@@ -38,12 +38,12 @@
 
   ## Setup
 
-  To install locally, clone the repository and then run `npm i` to install required packages. To run the application, run `npm start`. The live application can be accessed using the link provided above. No installation is necessary. The app can be saved in the applications menu of mobile devices by selecting `Add to home screen` or a similar option.
+  To install locally, clone the repository and then run `npm i` to install required packages. To run the application, run `npm start`. The live application can be accessed using the link provided above. No installation is necessary for this.
 
 
   ## Usage
 
-  Enter your transaction reference and amount. Then hit add or subtract to log it.
+  Use the 'Sory By' drop down to sort the directory by first, last name or state. Use search to find who you're looking for.
 
 
   ## License
