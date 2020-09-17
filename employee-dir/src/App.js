@@ -44,10 +44,37 @@ class App extends React.Component {
     });
   };
 
-  sorter = () => {
+  searchSorter = () => {
+    let filterArray = [];
     if (this.state.employees.length > 0) {
-      return this.state.employees
-    }
+      filterArray = this.state.employees.filter((employee) => {
+        console.log(this.state.search);
+        console.log(
+          employee.name.first.toLowerCase().includes(this.state.search)
+        );
+        return (
+          employee.name.first.toLowerCase().includes(this.state.search) ||
+          employee.name.last.toLowerCase().includes(this.state.search) ||
+          employee.phone.toLowerCase().includes(this.state.search) ||
+          employee.email.toLowerCase().includes(this.state.search)
+        );
+      });
+
+      filterArray.sort((a, b) => {
+        switch (this.state.sortBy) {
+          case "firstName":
+            return a.name.first > b.name.first ? 1 : -1;
+          case "lastName":
+            return a.name.last > b.name.last ? 1 : -1;
+          case "stateName":
+            return a.location.state > b.location.state ? 1 : -1;
+          default:
+            return [];
+        }
+      });
+      console.log(filterArray);
+      return filterArray;
+    } else return [];
   };
 
   render() {
@@ -71,8 +98,8 @@ class App extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(this.sorter())}
-            {this.sorter().map((employee) => (
+            {console.log(this.searchSorter())}
+            {this.searchSorter().map((employee) => (
               <Employee
                 key={employee.id.value}
                 image={employee.picture.large}
