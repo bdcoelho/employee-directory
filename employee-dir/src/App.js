@@ -46,17 +46,7 @@ class App extends React.Component {
 
   sorter = () => {
     if (this.state.employees.length > 0) {
-      return this.state.employees.map((employee) => (
-        <Employee
-          key={employee.id.value}
-          image={employee.picture.large}
-          name={employee.name.first + " " + employee.name.last}
-          phone={employee.phone}
-          email={employee.email}
-          stateName={employee.location.state}
-          newEmail={"mailto:" + employee.email}
-        />
-      ));
+      return this.state.employees
     }
   };
 
@@ -80,7 +70,18 @@ class App extends React.Component {
               <th>Branch State</th>
             </tr>
           </thead>
-          <tbody>{this.sorter()}</tbody>
+          <tbody>{this.sorter().map((employee) => (
+        <Employee
+          key={employee.id.value}
+          image={employee.picture.large}
+          name={employee.name.first + " " + employee.name.last}
+          phone={employee.phone}
+          email={employee.email}
+          stateName={employee.location.state}
+          newEmail={"mailto:" + employee.email}
+        />
+      ))
+      }</tbody>
         </Table>
       </div>
     );
