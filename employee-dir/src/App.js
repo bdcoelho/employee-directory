@@ -107,7 +107,7 @@ class App extends React.Component {
                 phone={employee.phone}
                 email={employee.email}
                 stateName={employee.location.state}
-                newEmail={"mailto:" + employee.email}
+                mailTo={"mailto:" + employee.email}
               />
             ))}
           </tbody>
