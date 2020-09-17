@@ -14,7 +14,7 @@ function Employee(props) {
             <td>{props.phone}</td>
             <td>
                 <a 
-                    href={props.newEmail}
+                    href={props.mailTo}
                     target="_blank"
                     rel="noopener noreferrer"
                 >

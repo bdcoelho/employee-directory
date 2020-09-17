@@ -44,20 +44,37 @@ class App extends React.Component {
     });
   };
 
-  sorter = () => {
+  searchSorter = () => {
+    let filterArray = [];
     if (this.state.employees.length > 0) {
-      return this.state.employees.map((employee) => (
-        <Employee
-          key={employee.id.value}
-          image={employee.picture.large}
-          name={employee.name.first + " " + employee.name.last}
-          phone={employee.phone}
-          email={employee.email}
-          stateName={employee.location.state}
-          newEmail={"mailto:" + employee.email}
-        />
-      ));
-    }
+      filterArray = this.state.employees.filter((employee) => {
+        console.log(this.state.search);
+        console.log(
+          employee.name.first.toLowerCase().includes(this.state.search)
+        );
+        return (
+          employee.name.first.toLowerCase().includes(this.state.search) ||
+          employee.name.last.toLowerCase().includes(this.state.search) ||
+          employee.phone.toLowerCase().includes(this.state.search) ||
+          employee.email.toLowerCase().includes(this.state.search)
+        );
+      });
+
+      filterArray.sort((a, b) => {
+        switch (this.state.sortBy) {
+          case "firstName":
+            return a.name.first > b.name.first ? 1 : -1;
+          case "lastName":
+            return a.name.last > b.name.last ? 1 : -1;
+          case "stateName":
+            return a.location.state > b.location.state ? 1 : -1;
+          default:
+            return [];
+        }
+      });
+      console.log(filterArray);
+      return filterArray;
+    } else return [];
   };
 
   render() {
@@ -80,7 +97,20 @@ class App extends React.Component {
               <th>Branch State</th>
             </tr>
           </thead>
-          <tbody>{this.sorter()}</tbody>
+          <tbody>
+            {console.log(this.searchSorter())}
+            {this.searchSorter().map((employee) => (
+              <Employee
+                key={employee.id.value}
+                image={employee.picture.large}
+                name={employee.name.first + " " + employee.name.last}
+                phone={employee.phone}
+                email={employee.email}
+                stateName={employee.location.state}
+                mailTo={"mailto:" + employee.email}
+              />
+            ))}
+          </tbody>
         </Table>
       </div>
     );
