@@ -70,18 +70,20 @@ class App extends React.Component {
               <th>Branch State</th>
             </tr>
           </thead>
-          <tbody>{this.sorter().map((employee) => (
-        <Employee
-          key={employee.id.value}
-          image={employee.picture.large}
-          name={employee.name.first + " " + employee.name.last}
-          phone={employee.phone}
-          email={employee.email}
-          stateName={employee.location.state}
-          newEmail={"mailto:" + employee.email}
-        />
-      ))
-      }</tbody>
+          <tbody>
+            {console.log(this.sorter())}
+            {this.sorter().map((employee) => (
+              <Employee
+                key={employee.id.value}
+                image={employee.picture.large}
+                name={employee.name.first + " " + employee.name.last}
+                phone={employee.phone}
+                email={employee.email}
+                stateName={employee.location.state}
+                newEmail={"mailto:" + employee.email}
+              />
+            ))}
+          </tbody>
         </Table>
       </div>
     );
