@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+  ![Code Count](https://img.shields.io/github/languages/count/bdcoelho/employee-directory) 
+  ![Main Code Base](https://img.shields.io/github/languages/top/bdcoelho/employee-directory) 
+  ![License](https://img.shields.io/badge/license-MIT-blue) 
+  ![Version](https://img.shields.io/badge/version-1.0-red) 
+  ![Last Commit](https://img.shields.io/github/last-commit/bdcoelho/employee-directory) 
+  ![Open Issues](https://img.shields.io/github/issues-raw/bdcoelho/employee-directory) 
+  ![Repo Size](https://img.shields.io/github/repo-size/bdcoelho/employee-directory)
 
-In the project directory, you can run:
+  # Welcome to Budget Tracker
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  ## Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  * [Description](#Description)
+  * [Demonstration](#Demonstration)
+  * [Setup](#Setup)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributions](#Contributions)
+  * [Version](#Version)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ## Description
 
-### `npm run build`
+  This is an application to that demonstates the use of React.js to create an interactive and dynamic employee directory. The page allows users to sort employees by first name, last name or the state of their branch. The application is built to be modular to allow reuse of components for future expansion or use elsewhere.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  ## Demonstration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Access the live application here: https://fast-anchorage-29235.herokuapp.com/.
 
-### `npm run eject`
+  #### Screenshot
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ![Screenshot](./public/img/screenshot.png "Screenshot")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ## Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  To install locally, clone the repository and then run `npm i` to install required packages. To run the application, run `npm start`. The live application can be accessed using the link provided above. No installation is necessary. The app can be saved in the applications menu of mobile devices by selecting `Add to home screen` or a similar option.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+  ## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Enter your transaction reference and amount. Then hit add or subtract to log it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+  ## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+  ![License Badge](https://img.shields.io/badge/license-MIT-blue)
 
-### Analyzing the Bundle Size
+  You may utilize this application under the terms of the [MIT license](public/license/MIT.txt).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  ## Contributions
 
-### Making a Progressive Web App
+  Make a pull request for suggested changes or fixes and I will review and approve it as necessary.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+  ## Version
 
-### Deployment
+  ![Version Badge](https://img.shields.io/badge/version-1.0-red)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+  ## Tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  No tests available currently.
+
+  ## Questions
+
+  If you have further questions or would like to see more features, please contact me via github or email:
+
+  https://github.com/bdcoelho 
+
+  ben_coelho@hotmail.com
+  
