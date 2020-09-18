@@ -43,7 +43,7 @@
 
   ## Usage
 
-  Use the 'Sory By' drop down to sort the directory by first, last name or state. Use search to find who you're looking for.
+  Use the 'Sort By' drop down to sort the directory by first, last name or state. Use search to find who you're looking for.
 
 
   ## License
