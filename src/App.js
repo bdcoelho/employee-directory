@@ -24,7 +24,6 @@ class App extends React.Component {
   };
 
   handleInputChange = (event) => {
-    console.log(event.target.value);
     this.setState({
       pending: event.target.value,
     });
@@ -32,13 +31,11 @@ class App extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.pending);
     this.setState({ search: this.state.pending });
   };
 
   handleSort = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
     this.setState({
       sortBy: event.target.value,
     });
@@ -48,10 +45,6 @@ class App extends React.Component {
     let filterArray = [];
     if (this.state.employees.length > 0) {
       filterArray = this.state.employees.filter((employee) => {
-        console.log(this.state.search);
-        console.log(
-          employee.name.first.toLowerCase().includes(this.state.search)
-        );
         return (
           employee.name.first.toLowerCase().includes(this.state.search) ||
           employee.name.last.toLowerCase().includes(this.state.search) ||
@@ -72,7 +65,6 @@ class App extends React.Component {
             return [];
         }
       });
-      console.log(filterArray);
       return filterArray;
     } else return [];
   };
@@ -98,7 +90,6 @@ class App extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(this.searchSorter())}
             {this.searchSorter().map((employee) => (
               <Employee
                 key={employee.id.value}

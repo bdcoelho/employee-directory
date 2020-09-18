@@ -3,7 +3,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Nav, Navbar} from "react-bootstrap";
 
 const myNav = (props) => {
   return (
