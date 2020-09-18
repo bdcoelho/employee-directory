@@ -40,12 +40,13 @@ const myNav = (props) => {
             </NavDropdown>
           </Nav>
 
-          <Form inline>
+          <Form onSubmit={props.handleFormSubmit} inline>
             <FormControl
               type="text"
               placeholder="Search"
               className="mr-sm-2"
               onChange={props.handleInputChange}
+              
               value={props.value}
             />
             <Button variant="outline-success" onClick={props.handleFormSubmit}>Search</Button>
